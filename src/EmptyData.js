@@ -17,16 +17,20 @@ export default class EmptyData extends React.Component {
     theme: PropTypes.string,
     style: PropTypes.object,
     className: PropTypes.string,
+    type: PropTypes.oneOf(['small', 'medium', 'large']),
   };
 
   static defaultProps = {
     children: i18n[i18nDefault].description,
     lang: i18nDefault,
+    iconSmall: '//cdn.ewt360.com/ewt360/images/images/searchno.jpg?t=201806222330',
     icon: '//cdn.ewt360.com/ewt360/images/images/searchno.jpg?t=201806222330',
+    iconLarge: '//cdn.ewt360.com/ewt360/images/images/searchno.jpg?t=201806222330',
     prefixCls: 'eui-empty-data',
     theme: 'default',
     style: {},
     className: '',
+    type: 'medium'
   };
 
   render() {
@@ -34,19 +38,30 @@ export default class EmptyData extends React.Component {
       prefixCls,
       children,
       icon,
+      iconSmall,
+      iconLarge,
       style,
+      type,
       className,
+      ...others,
     } = this.props;
+
+    const iconMap = {
+      small: iconSmall,
+      medium: icon,
+      large: iconLarge,
+    };
 
     return (
       <div
+        {...others}
         className={classnames({ [prefixCls]: true }, { [className]: !!className })}
         style={style}
       >
         <div
           className={`${prefixCls}-icon`}
           style={{
-            backgroundImage: `url(${icon})`,
+            backgroundImage: `url(${iconMap[type]})`,
           }}
         />
         <div className={`${prefixCls}-content`}>
