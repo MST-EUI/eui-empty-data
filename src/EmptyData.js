@@ -23,9 +23,9 @@ export default class EmptyData extends React.Component {
   static defaultProps = {
     children: i18n[i18nDefault].description,
     lang: i18nDefault,
-    iconSmall: '//cdn.ewt360.com/ewt360/images/images/searchno.jpg?t=201806222330',
+    iconSmall: '//www.baidu.com/img/bd_logo1.png',
     icon: '//cdn.ewt360.com/ewt360/images/images/searchno.jpg?t=201806222330',
-    iconLarge: '//cdn.ewt360.com/ewt360/images/images/searchno.jpg?t=201806222330',
+    iconLarge: '//www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
     prefixCls: 'eui-empty-data',
     theme: 'default',
     style: {},
@@ -43,7 +43,6 @@ export default class EmptyData extends React.Component {
       style,
       type,
       className,
-      ...others,
     } = this.props;
 
     const iconMap = {
@@ -54,8 +53,7 @@ export default class EmptyData extends React.Component {
 
     return (
       <div
-        {...others}
-        className={classnames({ [prefixCls]: true }, { [className]: !!className })}
+        className={classnames({ [`${prefixCls} ${type}`]: true }, { [className]: !!className })}
         style={style}
       >
         <div
