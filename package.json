@@ -42,7 +42,6 @@
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "@mistong/eui-cli": "latest",
-    "@mistong/eui-css": "latest",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^23.6.0",
     "conventional-changelog-cli": "^2.0.1",
@@ -64,6 +63,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "@mistong/eui-css": "latest",
     "react-addons-test-utils": "^0.14.0"
   },
   "config": {
