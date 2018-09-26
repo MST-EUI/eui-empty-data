@@ -1,6 +1,6 @@
 {
-  "name": "eui-component-template",
-  "version": "0.1.1",
+  "name": "@mistong/eui-empty-data",
+  "version": "0.1.0",
   "description": "EUI component development template",
   "main": "dist/index.js",
   "scripts": {
