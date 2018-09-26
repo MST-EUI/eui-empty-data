@@ -1,24 +1,32 @@
+@import '../../node_modules/@mistong/eui-css/variable.scss';
+
 $prefix: 'eui-empty-data';
 .#{$prefix} {
   text-align: center;
+  font-size: 14px;
   .#{$prefix}-icon {
     width: 120px;
-    height: 120px;
+    height: 90px;
     background-repeat: no-repeat;
     background-position: center center;
     display: inline-block;
-    background-size: 100% 100%;
+    background-size: contain;
   }
   &.small {
+    font-size: 14px;
     .#{$prefix}-icon {
       width: 80px;
-      height: 80px;
+      height: 60px;
+    }
+    .#{$prefix}-content {
+      margin-top: 0;
     }
   }
   &.large {
+    font-size: 16px;
     .#{$prefix}-icon {
       width: 200px;
-      height: 200px;
+      height: 180px;
     }
   }
   .#{$prefix}-content {
