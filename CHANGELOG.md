@@ -1,3 +1,13 @@
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/MST-EUI/eui-empty-data/compare/v0.1.6...v0.1.7) (2018-10-09)
+
+
+### Bug Fixes
+
+* add demo to npm pck ([26e5434](https://github.com/MST-EUI/eui-empty-data/commit/26e5434))
+
+
+
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/MST-EUI/eui-empty-data/compare/v0.1.5...v0.1.6) (2018-10-09)
 
