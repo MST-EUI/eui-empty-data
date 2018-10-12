@@ -4,8 +4,14 @@
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Code } from '@mistong/eui';
+import {
+  Code,
+  Demo,
+} from '@mistong/eui';
+
+/* placeholder begin eui style */
 import '@mistong/eui/dist/index.css';
+/* placeholder end eui style */
 
 /* placeholder begin src */
 import EmptyData from '../src';
@@ -14,7 +20,7 @@ import EmptyData from '../src';
 import './index.scss';
 
 /* placeholder begin class */
-class Demo extends React.Component {
+class DemoComponent extends React.Component {
   render() {
     const codeSmall = `
 import { EmptyData } from '@mistong/eui';
@@ -32,7 +38,7 @@ import { EmptyData } from '@mistong/eui';
 <EmptyData style={{ width: '200px' }} type="large" />
 `;
     return (
-      <div className="demo eui-empty-data-demo">
+      <Demo>
         <h2>EmptyData 组件</h2>
         <p>空数据组件，数据为空时使用。</p>
         <h3>代码演示</h3>
@@ -46,7 +52,7 @@ import { EmptyData } from '@mistong/eui';
           <EmptyData style={{ width: '200px' }} type="large" />
         </Code>
         <h3>API</h3>
-        <table className="demo-table">
+        <table>
           <thead>
             <tr>
               <th>参数</th>
@@ -57,28 +63,10 @@ import { EmptyData } from '@mistong/eui';
           </thead>
           <tbody>
             <tr>
-              <td>lang</td>
-              <td>语言包类型 (<code>zh-cn</code> <code>en</code>)</td>
+              <td>type</td>
+              <td>背景图片类型 (<Code mode="inline">small</Code> <Code mode="inline">medium</Code> <Code mode="inline">large</Code>)</td>
               <td>string</td>
-              <td><code>zh-cn</code></td>
-            </tr>
-            <tr>
-              <td>className</td>
-              <td>添加自定义class</td>
-              <td>string</td>
-              <td><code>&#39;&#39;</code></td>
-            </tr>
-            <tr>
-              <td>style</td>
-              <td>自定义样式</td>
-              <td>object</td>
-              <td><code>{'{}'}</code></td>
-            </tr>
-            <tr>
-              <td>prefixCls</td>
-              <td>样式名前缀</td>
-              <td>string</td>
-              <td>eui-empty-data</td>
+              <td><Code mode="inline">medium</Code></td>
             </tr>
             <tr>
               <td>children</td>
@@ -93,14 +81,32 @@ import { EmptyData } from '@mistong/eui';
               <td>https://yukap6.github.io/images/empty.png</td>
             </tr>
             <tr>
-              <td>type</td>
-              <td>背景图片类型 (<code>small</code> <code>medium</code> <code>large</code>)</td>
+              <td>lang</td>
+              <td>语言包类型 (<Code mode="inline">zh-cn</Code> <Code mode="inline">en</Code>)</td>
               <td>string</td>
-              <td>medium</td>
+              <td><Code mode="inline">zh-cn</Code></td>
+            </tr>
+            <tr>
+              <td>className</td>
+              <td>添加自定义class</td>
+              <td>string</td>
+              <td><Code mode="inline">&#39;&#39;</Code></td>
+            </tr>
+            <tr>
+              <td>style</td>
+              <td>自定义样式</td>
+              <td>object</td>
+              <td><Code mode="inline">{'{}'}</Code></td>
+            </tr>
+            <tr>
+              <td>prefixCls</td>
+              <td>样式名前缀</td>
+              <td>string</td>
+              <td>eui-empty-data</td>
             </tr>
           </tbody>
         </table>
-      </div>
+      </Demo>
     );
   }
 }
@@ -108,7 +114,7 @@ import { EmptyData } from '@mistong/eui';
 
 /* placeholder begin ReactDOM */
 ReactDOM.render(
-  <Demo />,
+  <DemoComponent />,
   document.getElementById('app'),
 );
 /* placeholder end ReactDOM */
